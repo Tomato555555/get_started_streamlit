@@ -3,4 +3,4 @@ joblib
 Pillow
 pandas
 numpy
-sklearn
+scikit-learn
