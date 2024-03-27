@@ -20,7 +20,7 @@ pcr1 = Image.open('dead-fish.png')
 st.sidebar.title("Features")
 number_dna = st.sidebar.number_input("DNA quantity (A260/A280)", key='number_dna',format="%.3f",value=1.842)
 number_ph = st.sidebar.number_input("PH value of water",key='number_ph',format="%.3f",value=7.46)
-number_temp = st.sidebar.number_input("Water temperature",key='number_temp',format="%.3f",value=23.7)
+number_temp = st.sidebar.number_input("Water temperature (degrees Celsius)",key='number_temp',format="%.3f",value=23.7)
 
 input_data = {'ndna': number_dna,
               'ph': number_ph,
