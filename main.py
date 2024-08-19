@@ -8,8 +8,8 @@ from sklearn.preprocessing import MinMaxScaler
 
 #step 1 ------------------------------
 #Loading Our final trained Knn model 
-model_is= open("KnnClassifier_goldFish.pkl", "rb")
-knn_clf=joblib.load(model_is)
+model_is= open("RFClassifier_goldFish.pkl", "rb")
+modal_use=joblib.load(model_is)
 st.title("Cyprinid Herpes Virus 2 (CyHV-2) in goldfish Classification App")
 #Loading images
 homeImage= Image.open('home.png')
@@ -51,7 +51,7 @@ _X4_web = _X3.filter(items = [148], axis=0)
 
 # Classification button
 if st.button("Click Here to Classify"):
-    prediction = knn_clf.predict(_X4_web)
+    prediction = modal_use.predict(_X4_web)
     print(prediction)
     # Display the corresponding flower image based on the prediction
     if prediction == 0:
