@@ -19,9 +19,9 @@ pcr1 = Image.open('dead-fish.png')
 # Sidebar title and input fields
 st.sidebar.title("Features")
 number_ph = st.sidebar.number_input("PH value of water",key='number_ph',format="%.3f",value=7.52)
-number_temp = st.sidebar.number_input("Water temperature (degrees Celsius)",key='number_temp',format="%.3f",value=24.6)
-number_tlf = st.sidebar.number_input("total length of the fish (CM)", key='number_tlf',format="%.3f",value=4.3)
-number_tl = st.sidebar.number_input("length of the fish tank (CM)", key='number_tl',format="%.3f",value=38.0)
+number_temp = st.sidebar.number_input("Water temperature (Degrees Celsius)",key='number_temp',format="%.3f",value=24.6)
+number_tlf = st.sidebar.number_input("total length of the fish (Centimeter)", key='number_tlf',format="%.3f",value=4.3)
+number_tl = st.sidebar.number_input("length of the fish tank (Centimeter)", key='number_tl',format="%.3f",value=38.0)
 
 
 input_data = {'ph': number_ph,
