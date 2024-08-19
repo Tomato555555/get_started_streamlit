@@ -18,18 +18,21 @@ pcr1 = Image.open('dead-fish.png')
 
 # Sidebar title and input fields
 st.sidebar.title("Features")
-number_dna = st.sidebar.number_input("DNA quantity (A260/A280)", key='number_dna',format="%.3f",value=1.842)
-number_ph = st.sidebar.number_input("PH value of water",key='number_ph',format="%.3f",value=7.46)
-number_temp = st.sidebar.number_input("Water temperature (degrees Celsius)",key='number_temp',format="%.3f",value=23.7)
+number_ph = st.sidebar.number_input("PH value of water",key='number_ph',format="%.3f",value=7.52)
+number_temp = st.sidebar.number_input("Water temperature (degrees Celsius)",key='number_temp',format="%.3f",value=24.6)
+number_tlf = st.sidebar.number_input("total length of the fish (CM)", key='number_tlf',format="%.3f",value=4.3)
+number_tl = st.sidebar.number_input("length of the fish tank (CM)", key='number_tl',format="%.3f",value=38.0)
 
-input_data = {'ndna': number_dna,
-              'ph': number_ph,
-              'temp': number_temp}
+
+input_data = {'ph': number_ph,
+              'temp': number_temp,
+              'tlf': number_tlf,
+              'tl': number_tl}
 
 input_df = pd.DataFrame([input_data])
 
 #drop คอลัมน์เลือกเอาเฉพาะที่เกี่ยวข้อง
-_column = ['ndna', 'ph','temp']
+_column = ['ph', 'temp', 'tlf', 'tl']
 dataset_X= open("dataset_X.pkl", "rb")
 _X=joblib.load(dataset_X)
 _X2 = pd.DataFrame(_X, columns = _column)
